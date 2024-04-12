@@ -7,7 +7,7 @@ name: Collect and print async labels
       - opened
       - reopened
     branches:
-      - dev
+      - main
 
 permissions: {}
 
