@@ -1,0 +1,16 @@
+---
+name: Create new labels
+
+'on':
+  push:
+    branches:
+      - "async-v*"
+
+permissions: {}
+
+jobs:
+  create_async_labels:
+    name: Create new labels
+    uses: benedikt-voelkel/ali-bot/.github/workflows/async-create-label.yml@async-labels
+    permissions:
+      pull-requests: write   # to update labels

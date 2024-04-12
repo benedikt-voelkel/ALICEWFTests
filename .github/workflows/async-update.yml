@@ -1,0 +1,16 @@
+---
+name: Update PRs and labels
+
+'on':
+  push:
+    branches:
+      - "async-v*"
+
+permissions: {}
+
+jobs:
+  create_async_labels:
+    name: Update PRs and labels
+    uses: benedikt-voelkel/ali-bot/.github/workflows/async-update.yml@async-labels
+    permissions:
+      pull-requests: write   # to update labels
